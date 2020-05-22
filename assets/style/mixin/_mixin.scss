@@ -1,0 +1,98 @@
+ @import 'paticals/of-color-my-page';
+
+@mixin for-contact-icon {
+    border-radius: 50%;
+    border: 2px solid $color-span-logo;
+    width: 64px;
+    height: 64px;
+    padding: 22px;
+    margin: 5px;
+}
+@mixin for-contact-icon-h2 {
+    font-size:  22px !important;
+    color: $color-black !important;
+    margin: 0;
+    margin-left: -5px;
+}
+@mixin for-contact-icon-p {
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: gray;
+    margin: 0;
+}
+@mixin for-blue-icons {
+    width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     background-color:$color-icons;
+     box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+     margin: 0 auto;
+     padding: 14px;
+     font-size: 30px;
+}
+@mixin blue-icons-for-coaching-work {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:$color-icons;
+    box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+    margin: 8px 30px;
+    padding: 14px;
+    font-size: 30px;
+}
+@mixin happy-clients {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+@mixin footer-headers {
+    color: $color-white;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+@mixin footer-lists {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-family: inherit;
+}
+@mixin footer-input {
+    height: 44px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none !important;
+}
+@mixin contact-icons {
+    border: 2px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin label {
+    color:$color-black;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+@mixin form-control {
+    border: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    padding-left: 10px;
+    height: 52px !important;
+    color: #000000 !important;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: none !important;
+}

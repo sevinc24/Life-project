@@ -1,0 +1,975 @@
+@import 'mixin/mixin';
+@import 'mixin/paticals/of-color-my-page';
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    overflow-x: hidden;
+}
+/*-------------------------------------------------------Home page----------------------------------------------------------------*/
+
+/*---------------- first-nav-start  -----------*/
+.my-first-navbar{
+    background-color: $color-black;
+    padding: 0;
+    a{
+        text-decoration: none;
+        i{
+            color: $color-white;
+        }
+        span{
+            color: $color-white;
+        }
+    }
+    ul{
+        text-align: center;
+        li{
+            i{
+                color: $color-white;
+                width: 34px;
+                height: 34px;
+                background: $color-bg-icon;
+                margin-right: 1px;
+                padding: 10px;
+                &:hover{  
+                   background-color: $color-bg-hover-icon;
+                   transition: all .3s ease-in;
+                }
+            }
+        }
+    }
+}
+/*-------------- first-nav-end --------------*/
+
+/*-------------- second-nav-start--------------*/
+.my-second-navbar{
+    .life{
+        color: $color-black;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1;
+        text-decoration: none;
+        padding: 30px;
+        span{
+            color: $color-span-logo;
+        }
+    }
+    .my-list-menu{
+        ul{
+            padding-left: 29px;
+            .active{
+                a{
+                    color: $color-white !important;
+                    background-color: $color-bg-hover-icon;
+                }
+            }
+            li{
+                a{
+                    font-size: 11px;
+                    padding-top: 2rem;
+                    padding-bottom: 2rem;
+                    padding-left: 20px !important;
+                    padding-right: 20px !important;
+                    font-weight: 500;
+                    color: $color-bg-icon;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    position: relative;
+                    opacity: 1 !important;
+                    &:hover{
+                        background-color:$color-bg-hover-icon;
+                        transition: all 0.2s ease-in-out 0s;
+                        color: $color-white !important;
+                        visibility: visible !important;
+                        transform: scaleX(1) !important;
+
+                    }
+                  
+                
+                }
+            }
+        }
+        .search{
+            input{
+                height: 46px !important;
+                width: 226px;
+                background:$color-white !important;
+                color: $color-black !important;
+                font-size: 14px;
+                border-radius: 4px !important;
+                box-shadow: none !important;
+                &:focus{
+                    border-color:$color-bg-hover-icon !important;
+                }
+
+            }
+        }
+    }
+}
+@media (max-width: 568px){
+    .my-second-navbar{
+        button{
+            margin-left: 19px !important;
+        }
+    }
+}
+/*-------------- second-nav-end-----------------*/
+
+/*---------- header-image-part-start------------*/
+.header-img{
+    position: relative;
+    img{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
+    .my-center-text{
+        position: absolute;
+        top: 300px;
+        left: 323px;
+        .text-center{
+            h2{
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 600;
+                color: $color-header-h2;
+                display: inline-block;
+                letter-spacing: 4px;
+            }
+            h1{
+                font-size: 40px;
+                font-weight: 700;
+                color: $color-white;
+                line-height: 1;
+                text-shadow: 0px 3px 25px rgba(0, 0, 0, 0.1);
+            }
+            p{
+                a{
+                    box-shadow: none !important;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    padding: 12px 16px;
+                    border-radius: 4px;
+                    background: $color-white;
+                    border: 1px solid $color-white;
+                    color:$color-black;
+                    &:hover{
+                        color: $color-white;
+                        background-color: transparent;
+                        border-color: $color-white;
+                        transition: all .3 ease-in;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 568px){
+    .my-center-text{
+        left: 0 !important;
+        top: 100px !important;
+    }
+}
+/*---------- header-image-part-end-------------*/
+
+
+/*-----------Make an Appointment-start---------*/
+#make_an_appointment{
+    padding: 40px 0px 40px 0px;
+    .call-us{
+        div{
+            i{
+                @include  for-contact-icon;
+            }
+        }
+        .call_us{
+            padding-left: 16px;
+            h2{
+               @include for-contact-icon-h2;
+            }
+            &:last-child{
+                @include for-contact-icon-p;
+            }
+        }
+    }
+
+   .make-an-app{
+       div{
+           button{
+            border-radius: 4px;
+            box-shadow: none !important;
+            border: none;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            height: 45px;
+            width: 234px;
+            background-color: $color-bg-hover-icon;
+            color: $color-white;
+            &:hover{
+                color: $color-bg-hover-icon;
+                background-color: transparent;
+                border-color: $color-bg-hover-icon;
+                border: 1px solid $color-bg-hover-icon;
+            }
+
+           }
+       }
+           
+   }
+}
+@media (max-width: 568px){
+    .call-us{
+        margin-left: 80px;
+    }
+    .make-an-app{
+        margin-left: 140px;
+    }
+}
+/*----------- Make an Appointment-end-----------*/
+
+
+/* ------------We offer services-start-----------*/
+.help-situations{
+    padding-top: 100px;
+    h2{
+        span{
+             font-weight: bold;
+             font-size: 24px;
+        }
+    }
+    p{
+        span{
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $color-bg-hover-icon;
+            font-weight: bold;
+        }
+    }
+}
+.flaticon-icons{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .icons{
+     @include for-blue-icons;
+    }
+    .icons-body{
+        margin-top: 25px;
+        h3{
+            span{
+                font-weight: 400;
+                font-size: 21px;
+            }
+        }
+    }
+}
+/* ------------We offer services-end-------------*/
+
+/*---------- Why coaching work?-start------------*/
+
+         /*---coaching-work-left-part---*/
+.coaching-work-left-part{
+    margin-top: 50px;
+    .video-bg{
+        position: relative;
+        border-radius: 10px solid;
+        img{
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        
+        }
+        .for-play-icon{
+            position: absolute;
+            border-radius: 50%;
+            width: 86px;
+            height: 86px;
+            background-color: $color-bg-hover-icon;
+            bottom: 300px;
+            top: 279px;
+            right: -85px;
+            transform:translate(-50%, -50%);
+            animation: animate 3s linear infinite;
+            text-align: center;
+            a{
+                margin-left: 5px;
+                i{
+                    color: $color-white;
+                    padding: 34px;
+                }
+            }
+        }
+    }
+}
+.mfd-hide{
+    display: none !important;
+}
+@keyframes  animate{
+    0%{
+        box-shadow: 0 0 0 0 rgba(230, 233, 36, 0.7), 0 0 0 0 rgba(230, 233, 36, 0.7);
+    }
+    40%{
+        box-shadow: 0 0 0 40px rgba(230, 233, 36, 0), 0 0 0 0 rgba(230, 233, 36, 0.7);
+    }
+    80%{
+        box-shadow: 0 0 0 40px rgba(230, 233, 36, 0), 0 0 0 30px rgba(230, 233, 36, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(230, 233, 36, 0), 0 0 0 30px rgba(230, 233, 36, 0);
+    }
+}
+@media (max-width: 568px){
+    .for-play-icon{
+        right: 193px !important;
+        top: 220px !important;
+    }
+}
+         /*---coaching-work-right-part---*/
+.coaching-work-right-part{
+    padding: 35px;
+    margin-top: 50px;
+    .coaching-work-right-childs{
+        margin-bottom: 20px;
+        .icons-for-coaching-work{
+            @include blue-icons-for-coaching-work;
+            i{
+                margin-left: 8px;
+            }
+        }
+        .pages-part{
+            h4{
+                span{
+                    font-size: 18px;
+                }
+            }
+            p{
+                span{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+ @media (max-width:568px){
+    .icons-for-coaching-work{
+        margin: 0 !important;
+    }
+    .pages-part{
+        margin-left: 20px !important;
+    }
+ }
+/*---------- Why coaching work?-end--------------*/
+
+/* ------------Counter-part-start----------------*/
+.counter-section{
+    margin: 80px;
+    .count{
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+@media (max-width:568px){
+    .counter-section{
+        margin: 0 !important;
+        .counter-box{
+            margin: 25px;
+        }
+    }
+
+}
+/* ------------Counter-part-end-----------------*/
+
+/* -------Happy Clients & Feedbacks-start -------*/
+.happy-clients{
+    background-color: $color-icons;
+    .swipperslider {
+        font-size: 14px;
+        padding: 10px 0;
+        margin: 0;
+        cursor: pointer;
+        .swiper-container {
+            width: 100%;
+            padding-top: 27px;
+            padding-bottom: 50px;
+            .swiper-slide {
+                width: 350px;
+                height: 230px;
+                background: $color-white;
+                border-radius: 5px;
+                position: relative;
+                margin-right: 30px;
+                .header-text{
+                    padding: 19px;
+                    margin: 11px 0px 0px 10px;
+                }
+                .swipper-icon{
+                    position: absolute;
+                    background: $color-bg-hover-icon;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    color: $color-white;
+                    top: -19px;
+                    left: 23px;
+                    i{
+                        margin: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .image-swipper{
+        margin-left: 31px;
+        .user-image1{
+            background-image: url('../../image/person_1.jpg');
+            @include happy-clients;
+        }
+        .user-image2{
+            background-image: url('../../image/person_2.jpg');
+            @include happy-clients;
+        }
+        .user-image3{
+            background-image: url('../../image/person_3.jpg');
+            @include happy-clients;
+        }
+        .user-image4{
+            background-image: url('../../image/person_4.jpg');
+            @include happy-clients;
+        }
+        .user-image5{
+            background-image: url('../../image/person_5.jpg');
+            @include happy-clients;
+        }
+        .user-names{
+            padding-left: 20px;
+            margin-top: 12px;
+            p{
+            font-weight: 500;
+            font-size: 24px;
+            margin-bottom: 0 !important;
+            }
+            span{
+                font-size: 14px;
+                color: $color-clients;
+                margin-top: 70px !important;
+                padding: 2px;
+            }
+        }
+    }
+}
+/* -------Happy Clients & Feedbacks-end ---------*/
+
+
+/*----------------News & Blog-start-------------*/
+.news{
+    margin-top: 40px;
+    .news-img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        img{
+            width: 100%;  
+            border-radius: 4px;
+        }
+        div{
+            p{
+                a{
+                    text-decoration: none;
+                    color: $color-black;
+                    font-size: 20px;
+                    font-weight: 400;
+                    &:hover{
+                        color: $color-bg-hover-icon;
+                        transition: .3s ease-in-out;
+                    } 
+                }
+            }
+        }
+        .data-part{
+            margin: 8px 0px;
+            a{
+                text-decoration: none;
+                color: $color-data;
+                font-size: 15px;
+                margin-right: 10px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                &:hover{
+                    color: $color-black;
+                }
+            }
+            .comment{
+                color: $color-comment;
+                margin-left: 5px;
+                i{
+                    color: $color-comment;  
+    
+                }
+            }
+        }
+    }
+}
+/*----------------News & Blog-end---------------*/
+
+/* -----------Enter email adress-start----------*/
+.enter-email{
+    background-color:$color-icons;
+    height: 100px;
+    margin: 100px 0 0 0;
+    border-radius: 4px;
+    .left-piece{
+        padding-top: 38px;
+        padding-left: 30px;
+        h2{
+            font-size: 18px;
+            color: $color-black;
+          
+        }
+    }
+    .right-piece{
+        padding-top: 23px;
+        padding-right: 30px;
+        .subscribe-form{
+            width: 100%;
+            .inputs{
+               .one{
+                width: 100% !important;
+                padding-left: 13px;
+                height: 50px;
+                box-shadow: none !important;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+                border: none;
+                &:focus{
+                    border-color:none !important;
+                }
+               }
+               .two{
+                   background-color: $color-bg-hover-icon;
+                   border: none;
+                   cursor: pointer;
+                   width: 150px;
+                   border-bottom-right-radius: 4px;
+                   border-top-right-radius: 4px;
+                   color: $color-white;
+                   &:focus{
+                    border-color:none !important;
+                }
+               }
+            }
+        }
+    }
+}
+@media (max-width:568px){
+    .enter-email{
+        height: 200px;
+        .left-piece{
+            text-align: center;
+            padding-left: 0 !important;
+            h2{
+                font-size: 18px !important;
+            }
+        }
+        .right-piece{
+            display: flex;
+            justify-content: center;
+            form{
+                width: 300px !important;
+            }
+        }
+    }
+}
+/* -----------Enter email adress-end------------*/
+
+/* -----------price and plans-start-------------*/
+.price-plans{
+    background-color: $color-white;
+    border-radius: 5px;
+    position: relative;
+    height: 500px;
+    margin: 100px 12px;
+    .part-many{
+        padding-top: 45px;
+        span{
+          color: $color-dollar;
+          font-weight: 400;
+          padding-top: 7px;
+          font-size: 25px;
+
+        }
+        h2{
+            font-size: 60px;
+            margin: 0 !important;
+        }
+    }
+    .part-page{
+        h3{
+            span{
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 2px;
+                font-weight: bold;
+            }
+        }
+    }
+    .part-list{
+        padding: 17px;
+        ul{
+            padding: 0;
+            li{
+                list-style: none;
+                font-size: 17px;
+                margin-top: 25px;
+                i{
+                    color: $color-icons;
+                    font-size: 15px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .footer-btn{
+        background-color: $color-bg-hover-icon;
+        width: 200px;
+        height: 50px;
+        border-radius: 3px;
+        position: absolute;
+        bottom: -31px;
+        left: 29px;
+        a{
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            padding-top: 18px;
+        }
+    }
+}
+@media (max-width:568px){
+    .price-plans{
+        margin-left: 144px;
+    }
+      
+}
+/* ----------price and plans-end----------------*/
+
+/*-------------footer-piece-start---------------*/
+.footer-piece{
+    background-color: $color-footer-bg;
+    .footer-container{
+        padding-right: 0 !important;
+        .left-part{
+            .of-left-part-left-1{
+                h2{
+                    @include footer-headers;
+                }
+                p{
+                    @include footer-lists;
+                }
+                ul{
+                    padding: 0;
+                    margin-top: 31px;
+                    li{
+                        margin-right:10px;
+                        list-style: none;
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.05);
+                        a{
+                            text-decoration: none;
+                            i{
+                                color: $color-bg-hover-icon;
+                                padding: 12px;
+                                margin-left: 1px;
+                                &:hover{
+                                    color: $color-white;
+                                    transition: ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-center-part{
+                padding-left: 100px;
+                .part-1{
+                    h2{
+                        @include footer-headers;
+                    }
+                    ul{
+                        padding-left: 0;
+                        li{
+                            list-style: none; 
+                            margin-top: 10px;
+
+                            a{
+                                text-decoration: none;
+                                @include footer-lists;
+                            }
+                        }
+                    }
+                }
+                .part-2{
+                    h2{
+                        @include footer-headers;
+                    }
+                    ul{
+                        padding-left: 0;
+                        li{
+                            list-style: none; 
+                            margin-top: 10px;
+                            a{
+                                text-decoration: none;
+                                @include footer-lists;
+                            }
+                        }
+                    }
+                }
+                .part-3{
+                    h2{
+                        @include footer-headers;
+                    }
+                    ul{
+                        padding-left: 0;
+                        li{
+                            list-style: none; 
+                            margin-top: 10px;
+                            a{
+                                text-decoration: none;
+                                @include footer-lists;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right-part{
+            background-color: $color-input-bg;
+            padding: 43px;
+            h2{
+                @include footer-headers;
+            }
+            .form-part{
+                width: 100%;
+            .form-control{
+                @include footer-input;
+
+            }
+            div{
+                textarea{
+                    background: rgba(255, 255, 255, 0.1) !important;
+                    color: rgba(255, 255, 255, 0.3) !important;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    width: 100%;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    border-color: none !important;
+                    border: none;
+                    box-shadow: none !important;
+                }
+                button{
+                    width: 100%;
+                    background-color: $color-bg-hover-icon;
+                    color: $color-white;
+                    border: none;
+                    height: 50px;
+                    border-radius: 5px;
+                }
+            }
+            }
+        }
+    }
+}
+ @media (max-width:568px){
+     .left-part{
+         text-align: center;
+         .footer-center-part {
+            padding-left: 0 !important
+         }
+     }
+ }
+ /*--------------footer-piece-end---------------*/
+
+/*-----------------------------------------------------Contact page---------------------------------------------------------------*/
+
+ /*------------fixed-image-part-start------------*/
+.fixed-image {
+    background: url('../../image/bg_2.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position:center top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 500px;
+    .effect {
+        background-color: $color-black;
+        position: absolute !important;
+        left: 0;
+        top: 0;
+        opacity: .5;
+        width: 100%;
+        height: 500px;
+    }
+    .under-words{
+        padding-top: 28%;
+        .under-words-one{
+            padding-left: 18px;
+            a{
+            color: $color-under-word-one;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+            margin-right: 10px;
+            }
+            p{
+                span{
+                    color: $color-under-word-two;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .under-words-two{
+            h2{
+                span{
+                    font-weight: 400;
+                    font-size: 40px;        
+                    color: $color-white;
+                }
+            }
+
+        }
+    }
+}
+/*------------fixed-image-part-end--------------*/
+
+/*------------Contact-part-start----------------*/
+.my-contact-container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .my-contact-container-left-part{
+        background-color: $color-bg-hover-icon;
+        padding-bottom: 100px;
+        h2{
+            color: $color-white;
+            padding-top: 54px;
+            padding-left: 54px;
+        }
+        p{
+            padding-left: 54px;
+            span{
+             color: $color-contact-p;
+            line-height: 1.8;
+            }
+          
+        }
+        .left{
+            padding-left: 58px;
+            margin-bottom: 25px;
+            .first {
+                i{
+                    @include contact-icons;
+                    margin-top: 13px;
+                }
+            }
+            i{
+                @include contact-icons;
+            }
+            .right{
+                p{
+                padding-left: 10px !important;
+                font-size: 14px;
+                margin-top: 12px;
+                }
+            }
+        }
+        
+    }
+    .my-contact-container-right-part{
+        background-color: white;
+        padding-left: 30px;
+        h2{
+            padding-top: 54px;
+            font-weight: 400;
+            padding-left: 21px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: $color-footer-p;
+            padding-left: 21px;
+        }
+        .control-form{
+            .first-piece{
+                .name-user{
+                    padding: 29px;
+                    div{
+                        label{
+                            @include label;
+                        }
+                    }
+                    .form-control{
+                      @include form-control;
+                    }
+                }
+            }
+            .full{
+                 label{
+                    @include label;
+                }
+                .form-control{
+                    @include form-control;
+                  }
+            }
+            .button{
+                div{
+                    button{
+                        background: $color-bg-hover-icon;
+                        border: 1px solid $color-bg-hover-icon;
+                        color: $color-white;
+                        padding: 12px 16px;
+                        border-radius: 4px;
+                        box-shadow: none !important;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        &:hover{
+                            border-color: $color-bg-hover-icon;
+                            color: $color-bg-hover-icon;
+                            background-color: transparent;
+                            transition: all .3s ease-in;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-------------Contact-part-end-----------------*/
+
+/*------------------map part start--------------*/
+.map {
+    margin: 0px;
+    padding: 0px;
+    p {
+        margin: 0px;
+    }
+}
+/*------------------map part end----------------*/
